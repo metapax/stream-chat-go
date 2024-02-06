@@ -31,7 +31,7 @@ type Message struct {
 	Silent bool        `json:"silent,omitempty"`
 
 	User            *User          `json:"user"`
-	Attachments     []*Attachment  `json:"attachments"`
+	Attachments     interface{}    `json:"attachments"`
 	LatestReactions []*Reaction    `json:"latest_reactions"` // last reactions
 	OwnReactions    []*Reaction    `json:"own_reactions"`
 	ReactionCounts  map[string]int `json:"reaction_counts"`
