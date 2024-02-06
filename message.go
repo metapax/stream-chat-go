@@ -126,7 +126,7 @@ type messageRequest struct {
 type messageRequestMessage struct {
 	Text            string                 `json:"text"`
 	Type            MessageType            `json:"type" validate:"omitempty,oneof=system"`
-	Attachments     []*Attachment          `json:"attachments"`
+	Attachments     interface{}            `json:"attachments"`
 	User            messageRequestUser     `json:"user"`
 	MentionedUsers  []string               `json:"mentioned_users"`
 	ParentID        string                 `json:"parent_id"`
